@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Jumpstart™ - $0 to $10,000/Day in 90 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #FF6B35;
+            --secondary-color: #004E89;
+            --dark-bg: #1A1A2E;
+            --light-bg: #F7F7F7;
+            --success-color: #2ECC71;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            --gradient-dark: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .hero .subtext {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+        }
+
+        .cta-subtext {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--light-bg);
+            padding: 60px 20px;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-card .quote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .testimonial-card .author {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .checkmark {
+            color: var(--success-color);
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+
+        /* Story Section */
+        .story {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .story h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .story-content p {
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #FFD700 0%, #FFA500 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--dark-bg);
+        }
+
+        /* Dashboard Preview */
+        .dashboard-preview {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .dashboard-preview h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-stats {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            font-size: 1.2rem;
+        }
+
+        .stat-row:last-child {
+            border-bottom: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2ECC71;
+        }
+
+        .stat-label {
+            font-weight: 600;
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        /* Method Section */
+        .method {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .method h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .method-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: var(--text-light);
+        }
+
+        .method-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .method-step {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .method-step:hover {
+            transform: translateY(-10px);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 30px 0 15px;
+            color: var(--secondary-color);
+        }
+
+        .step-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        /* Timeline Comparison */
+        .timeline-comparison {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .timeline-comparison h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-card {
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .timeline-card.old {
+            background: #FFE5E5;
+            border: 3px solid #FF6B6B;
+        }
+
+        .timeline-card.new {
+            background: #E8F8F5;
+            border: 3px solid #2ECC71;
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .timeline-card.old .timeline-title {
+            color: #C0392B;
+        }
+
+        .timeline-card.new .timeline-title {
+            color: #27AE60;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        /* Phases Section */
+        .phases {
+            background: var(--light-bg);
+            padding: 80px 20px;
+        }
+
+        .phases h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: var(--text-light);
+        }
+
+        .phase {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .phase-header {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .phase-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .phase-mission {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .phase-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin: 30px 0 15px;
+        }
+
+        .phase-content ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .phase-content li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .phase-content li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+
+        .phase-outcome {
+            background: #E8F8F5;
+            border-left: 5px solid var(--success-color);
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        /* Bonuses Section */
+        .bonuses {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 80px 20px;
+        }
+
+        .bonuses h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .bonus-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .bonus-header {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+
+        .bonus-value {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .bonus-card ul {
+            list-style: none;
+        }
+
+        .bonus-card li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .value-table {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .value-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding: 20px 30px;
+            border-bottom: 1px solid #E0E0E0;
+            font-size: 1.1rem;
+        }
+
+        .value-row:last-child {
+            background: var(--gradient-dark);
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .value-row.total {
+            background: var(--gradient-primary);
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        .price-amount {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .final-price {
+            background: var(--light-bg);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border: 3px solid var(--primary-color);
+        }
+
+        .final-price h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .price-highlight {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .price-options {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: var(--success-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        /* Urgency Section */
+        .urgency {
+            background: var(--light-bg);
+            padding: 80px 20px;
+        }
+
+        .urgency-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(192, 57, 43, 0.4);
+        }
+
+        .urgency-box h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .urgency-content {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .spots-remaining {
+            font-size: 3rem;
+            font-weight: 900;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .guarantee-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: #E8F8F5;
+            padding: 60px;
+            border-radius: 20px;
+            border: 5px solid var(--success-color);
+            box-shadow: 0 10px 40px rgba(46, 204, 113, 0.2);
+        }
+
+        .guarantee-badge {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-box h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .guarantee-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        /* Path Comparison */
+        .paths {
+            background: var(--light-bg);
+            padding: 80px 20px;
+        }
+
+        .paths h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .path-card {
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .path-card.bad {
+            background: linear-gradient(135deg, #555 0%, #333 100%);
+            color: var(--white);
+        }
+
+        .path-card.good {
+            background: linear-gradient(135deg, #27AE60 0%, #2ECC71 100%);
+            color: var(--white);
+        }
+
+        .path-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .path-content {
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+
+        .path-content p {
+            margin-bottom: 15px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--white);
+            padding: 80px 20px;
+        }
+
+        .faq h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: var(--secondary-color);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light-bg);
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 107, 53, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 30px 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        /* Payment Options */
+        .payment-options {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 80px 20px;
+        }
+
+        .payment-options h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .payment-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .payment-card.best-value {
+            border-color: #FFD700;
+            border-width: 5px;
+            position: relative;
+        }
+
+        .best-value-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FFD700;
+            color: var(--dark-bg);
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .payment-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .payment-price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .payment-features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .payment-features li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-bg);
+            color: rgba(255,255,255,0.8);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .ps-section {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        .ps-section strong {
+            color: var(--primary-color);
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            max-width: 900px;
+            margin: 40px auto 0;
+            line-height: 1.6;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-dark);
+            padding: 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-cta .cta-button {
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero .subtext {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+
+            .testimonial-grid,
+            .method-steps,
+            .comparison-grid,
+            .bonus-grid,
+            .path-grid,
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .phase {
+                padding: 30px 20px;
+            }
+
+            .price-highlight {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            .sticky-cta .cta-button {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>The Proven 3-Step System That Took Me From $0 To $10,000/Day On ClickBank In 90 Days</h1>
+            <p class="subtitle">(Even Though I Couldn't Speak English)</p>
+            <p class="subtext">Including The "Ninja Redirect Script" That's Responsible For $300,000+ In Commissions... And Converts Cold Traffic At 6%+ (3X Better Than Regular Landing Pages)</p>
+            <p class="subtext"><strong>For: People Ages 25-45 Who Are DONE With "Guru BS" And Want The Actual Paint-By-Numbers System That Generated $1 Million+ In Real Commissions</strong></p>
+            <a href="#pricing" class="cta-button pulse">
+                👇 I Want My First $1,000 Day - Show Me The System 👇
+                <span class="cta-subtext">(30-Day Test Drive - Either This Works Or You Get Your Money Back)</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Real Students, Real Results:</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in-up">
+                    <p class="quote"><span class="checkmark">✅</span> "Ross's redirect script alone made me $3,200 my first month. Everything else is just a bonus."</p>
+                    <p class="author">- Josh M. ($51,020 in 6 months)</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <p class="quote"><span class="checkmark">✅</span> "I copied the quiz funnel word-for-word. Went from 1.2% conversion to 6.8%. That's 5X more sales from the same traffic."</p>
+                    <p class="author">- Victor S. (Doubled profits in week 2)</p>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <p class="quote"><span class="checkmark">✅</span> "47-year-old electrician here. Hated the Florida heat. Six months later? Quit my job. Still can't believe this is real."</p>
+                    <p class="author">- Terry K. (Now 5-figures monthly)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Introduction -->
+    <section class="story">
+        <div class="container">
+            <h2>Last Tuesday, I Watched $11,847 Hit My ClickBank Account.</h2>
+            <div class="story-content">
+                <p><strong>In one day.</strong></p>
+                <p><strong>While I slept.</strong></p>
+                <p><strong>From a campaign I set up 6 months ago.</strong></p>
+                <p>But 7 years ago?</p>
+                <p>I was delivering Uber Eats on a bicycle in 110°F Las Vegas heat.</p>
+                <p>Making $247 per week.</p>
+                <p>Couldn't speak English.</p>
+                <p>Had no "skills."</p>
+                <p>Had $247 in my bank account total.</p>
+                <p><strong>If you've ever felt like you're working your ass off for nothing...</strong></p>
+                <p><strong>If you've tried "make money online" courses that went absolutely nowhere...</strong></p>
+                <p><strong>If you're smart enough to know this CAN work, but can't figure out HOW...</strong></p>
+                <p><strong>Keep reading.</strong></p>
+                <p>Because I'm about to show you the exact 3-step system I used to go from broke immigrant to $1 million+ in ClickBank commissions.</p>
+                <p>And I'm giving you the <span class="highlight">EXACT campaigns, scripts, and funnels I use.</span></p>
+                <p>Not "theory."</p>
+                <p>Not "strategies."</p>
+                <p><strong>The actual assets that print money.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <h2>Here's What The Dashboard Looks Like When It's Working:</h2>
+            <div class="dashboard-stats">
+                <div class="stat-row">
+                    <span class="stat-label">Campaign:</span>
+                    <span class="stat-value">Health/Weight Loss Niche</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Ad Spend:</span>
+                    <span class="stat-value">$3,200</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Revenue:</span>
+                    <span class="stat-value">$11,847</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Profit:</span>
+                    <span class="stat-value">$8,647</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">ROI:</span>
+                    <span class="stat-value">270%</span>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 1.2rem;">This isn't Photoshopped. This is my actual ClickBank account from last Tuesday.</p>
+            <p style="font-size: 1.3rem; font-weight: 700; color: #FFD700;">And you're getting the EXACT funnel that generated this.</p>
+        </div>
+    </section>
+
+    <!-- The AIP Method -->
+    <section class="method">
+        <div class="container">
+            <h2>The "AIP Method" That Generated $1 Million+ In Commissions</h2>
+            <p class="method-intro">After 3 years and $847,000 in ad spend, I discovered something: <strong>EVERY profitable ClickBank campaign follows the same 3-step pattern.</strong></p>
+            <p class="method-intro" style="margin-bottom: 60px;"><strong>I call it The AIP Method:</strong></p>
+
+            <div class="method-steps">
+                <div class="method-step">
+                    <div class="step-number">A</div>
+                    <h3 class="step-title">Attention-Grabbing Ads</h3>
+                    <p class="step-description">Ads that stop the scroll and get clicks without sounding "salesy." You'll get 50+ proven ad templates that you can copy-paste for your niche.</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">I</div>
+                    <h3 class="step-title">Intelligent Quiz Funnels</h3>
+                    <p class="step-description">Convert at 6%+ vs 1-2% with regular landing pages. That's 3X-6X more sales from the same traffic. Get my exact quiz funnel that's made millions.</p>
+                </div>
+                <div class="method-step">
+                    <div class="step-number">P</div>
+                    <h3 class="step-title">Profit-Maximizing Scripts</h3>
+                    <p class="step-description">The $300K Ninja Redirect Script - 47 lines of code responsible for over $300,000 in commissions. Copy, paste, customize 3 variables. Done.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 30px;">Most people fail because they're missing ONE of these three pieces. The AIP Method solves all three simultaneously.</p>
+                <p style="font-size: 1.4rem; font-weight: 700; color: var(--primary-color);">That's why students go from $0 to $1,000/day in 90 days instead of 2 years.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Comparison -->
+    <section class="timeline-comparison">
+        <div class="container">
+            <h2>Here's The Transformation Timeline</h2>
+            <div class="comparison-grid">
+                <div class="timeline-card old">
+                    <h3 class="timeline-title">❌ OLD METHOD<br>(What Most Gurus Teach)</h3>
+                    <div class="timeline-item">📅 Month 1-3: "Build your audience" (no money)</div>
+                    <div class="timeline-item">📅 Month 4-6: "Create content" (no money)</div>
+                    <div class="timeline-item">📅 Month 7-9: "Engage with followers" (no money)</div>
+                    <div class="timeline-item">📅 Month 10-12: "Maybe start seeing results" (still broke)</div>
+                </div>
+                <div class="timeline-card new">
+                    <h3 class="timeline-title">✅ THE AIP METHOD</h3>
+                    <div class="timeline-item">✅ Week 1-2: Build funnel</div>
+                    <div class="timeline-item">✅ Week 3-4: Launch ads, first clicks</div>
+                    <div class="timeline-item">💰 Week 5-8: First commissions ($50-300)</div>
+                    <div class="timeline-item">💰💰💰 Week 9-12: Scale to $1,000/day</div>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 1.4rem; margin-top: 40px; font-weight: 700; color: var(--secondary-color);">
+                Most methods = 12 months of "maybe"<br>
+                AIP Method = 90 days of systems
+            </p>
+        </div>
+    </section>
+
+    <!-- Phases Section -->
+    <section class="phases">
+        <div class="container">
+            <h2>Here's EXACTLY What You're Getting</h2>
+            <p class="section-intro">This isn't theory. This is the actual system. The funnels. The ads. The scripts. Everything I use to make $10,000+ days.</p>
+
+            <div class="phase">
+                <div class="phase-header">
+                    <h3 class="phase-title">⚡ PHASE 1: THE FOUNDATION (Weeks 1-2)</h3>
+                    <p class="phase-mission">Your Mission: Go from "complete beginner" to "first campaign live"</p>
+                </div>
+                <div class="phase-content">
+                    <h3>✅ Pick Your First Winning Offer (5-Minute Scorecard Method)</h3>
+                    <ul>
+                        <li>The 5 criteria for "gold mine" offers</li>
+                        <li>Red flags to AVOID (save yourself $1,000s)</li>
+                        <li>My personal offer database (20+ proven winners)</li>
+                    </ul>
+
+                    <h3>✅ Set Up Your First Campaign (Even If You're Tech-Phobic)</h3>
+                    <ul>
+                        <li>Click-by-click video walkthroughs</li>
+                        <li>Zero assumptions (we start at absolute zero)</li>
+                        <li>Tech support in the community</li>
+                    </ul>
+
+                    <h3>✅ Install The $300K Ninja Redirect Script (Copy-Paste Ready)</h3>
+                    <ul>
+                        <li>The exact 47 lines of code</li>
+                        <li>How to customize it for your niche (3 variables)</li>
+                        <li>Where to place it in your funnel (timing is everything)</li>
+                    </ul>
+
+                    <div class="phase-outcome">By Week 2, you'll have a LIVE campaign ready to profit.</div>
+                </div>
+            </div>
+
+            <div class="phase">
+                <div class="phase-header">
+                    <h3 class="phase-title">⚡ PHASE 2: THE TRAFFIC (Weeks 3-4)</h3>
+                    <p class="phase-mission">Your Mission: Get buyers to your funnel (without burning money)</p>
+                </div>
+                <div class="phase-content">
+                    <h3>✅ Launch Your First Facebook Ad (Start With Just $10/Day)</h3>
+                    <ul>
+                        <li>The "micro-budget" scaling method</li>
+                        <li>How to test profitably (most people waste $500+ here)</li>
+                        <li>Budget thresholds (when to scale, when to pause)</li>
+                    </ul>
+
+                    <h3>✅ The AIP Ad Formula That Stops The Scroll</h3>
+                    <ul>
+                        <li>50+ proven ad templates (health, wealth, relationships)</li>
+                        <li>The "3-second hook" framework</li>
+                        <li>Image ads vs video ads (when to use each)</li>
+                    </ul>
+
+                    <h3>✅ Avoid The 3 Mistakes That Get Ad Accounts Banned</h3>
+                    <ul>
+                        <li>Proper pixel configuration (90% of bans are from this)</li>
+                        <li>Compliant ad copy (what Facebook ACTUALLY flags)</li>
+                        <li>How to appeal if it happens (I'll show you)</li>
+                    </ul>
+
+                    <div class="phase-outcome">By Week 4, you'll have profitable traffic flowing to your funnel.</div>
+                </div>
+            </div>
+
+            <div class="phase">
+                <div class="phase-header">
+                    <h3 class="phase-title">⚡ PHASE 3: THE SCALE (Weeks 5-12)</h3>
+                    <p class="phase-mission">Your Mission: Go from $100/day to $1,000/day (systematically)</p>
+                </div>
+                <div class="phase-content">
+                    <h3>✅ The 6% Quiz Funnel System (3X Better Than Regular Pages)</h3>
+                    <ul>
+                        <li>My exact quiz funnel (copy-paste the questions)</li>
+                        <li>Email follow-up for people who don't buy immediately</li>
+                        <li>How to connect it to ClickBank (tech walkthrough)</li>
+                    </ul>
+
+                    <h3>✅ How To Go From $100/Day To $1,000/Day Without Burnout</h3>
+                    <ul>
+                        <li>The "workflow automation" scaling method</li>
+                        <li>When to reinvest profits (most people scale too early)</li>
+                        <li>Managing multiple campaigns (without losing your mind)</li>
+                    </ul>
+
+                    <h3>✅ LIVE Campaign Access: Watch Me Make Money In Real-Time</h3>
+                    <ul>
+                        <li>My ACTUAL dashboard (updated daily)</li>
+                        <li>Real earnings, real ad creative, real numbers</li>
+                        <li>See my optimization decisions as I make them</li>
+                    </ul>
+
+                    <div class="phase-outcome">By Week 12, you'll be profitable and scaling systematically.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses -->
+    <section class="bonuses">
+        <div class="container">
+            <h2>🔥 EXCLUSIVE BONUSES 🔥</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <h3 class="bonus-header">BONUS #1: Special Scaling Workflows</h3>
+                    <p class="bonus-value">(Value: $397)</p>
+                    <p>The automation system that lets you go from $100/day to $1,000/day without turning into a workaholic.</p>
+                    <ul>
+                        <li>✅ Workflow templates (copy-paste into Zapier/Make)</li>
+                        <li>✅ AI-powered optimization (let AI do 80% of the work)</li>
+                        <li>✅ Multi-campaign management system</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-style: italic;">This is how I manage 7 profitable campaigns simultaneously.</p>
+                </div>
+
+                <div class="bonus-card">
+                    <h3 class="bonus-header">BONUS #2: Organic Traffic Methods (Free Traffic)</h3>
+                    <p class="bonus-value">(Value: $297)</p>
+                    <p>Want commissions WITHOUT paying for ads?</p>
+                    <ul>
+                        <li>✅ TikTok affiliate hacks (get views without showing face)</li>
+                        <li>✅ Pinterest "secret pins" strategy (1M+ views possible)</li>
+                        <li>✅ Reddit marketing (without getting banned)</li>
+                        <li>✅ YouTube Shorts blueprint (short-form = high engagement)</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-style: italic;">Free traffic = 100% profit margin.</p>
+                </div>
+
+                <div class="bonus-card">
+                    <h3 class="bonus-header">BONUS #3: LIVE Campaign Dashboard Access</h3>
+                    <p class="bonus-value">(Value: Priceless)</p>
+                    <p>This is UNPRECEDENTED transparency. You get access to a ClickBank campaign I'm running RIGHT NOW.</p>
+                    <ul>
+                        <li>✅ LIVE earnings (updated daily, no BS)</li>
+                        <li>✅ Exact ad creative (copy my winning ads)</li>
+                        <li>✅ Real funnel (see what's converting)</li>
+                        <li>✅ Budget & scaling decisions (watch me optimize)</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-style: italic;">This is like looking over my shoulder as I make $1,000+ per day. Nobody else offers this.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing/Value Breakdown -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>The Value Breakdown</h2>
+            <div class="value-table">
+                <div class="value-row">
+                    <div>Phase 1: The Foundation (Pick Offers, Setup, Ninja Script)</div>
+                    <div class="price-amount">$1,997</div>
+                </div>
+                <div class="value-row">
+                    <div>Phase 2: The Traffic (FB Ads, AIP Formula, Avoid Bans)</div>
+                    <div class="price-amount">$997</div>
+                </div>
+                <div class="value-row">
+                    <div>Phase 3: The Scale (Quiz Funnels, Scaling, Live Access)</div>
+                    <div class="price-amount">$1,497</div>
+                </div>
+                <div class="value-row">
+                    <div><strong>BONUSES:</strong></div>
+                    <div class="price-amount"></div>
+                </div>
+                <div class="value-row">
+                    <div>Scaling Workflow Automation</div>
+                    <div class="price-amount">$397</div>
+                </div>
+                <div class="value-row">
+                    <div>Organic Traffic Methods</div>
+                    <div class="price-amount">$297</div>
+                </div>
+                <div class="value-row">
+                    <div>Live Campaign Dashboard</div>
+                    <div class="price-amount">Priceless</div>
+                </div>
+                <div class="value-row total">
+                    <div>TOTAL VALUE</div>
+                    <div class="price-amount">$5,185+</div>
+                </div>
+            </div>
+
+            <div class="final-price">
+                <h3>Your Investment Today:</h3>
+                <div class="price-highlight">Just $297</div>
+                <p class="price-options">(Or 3 payments of $99 - your choice)</p>
+                <div class="discount-badge">94% OFF the total value</div>
+                <p style="margin-top: 30px; font-size: 1.1rem; color: var(--text-light);">That's less than one failed ad campaign.<br>That's less than a weekend trip.<br><strong style="color: var(--secondary-color);">But it could change your entire financial future.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency/Q4 Timing -->
+    <section class="urgency">
+        <div class="container">
+            <div class="urgency-box">
+                <h2>⏰ Why Q4 2024 Is The BEST Time To Start</h2>
+                <div class="urgency-content">
+                    <p><strong>ClickBank commissions are 30-40% higher in Q4 (October-December).</strong></p>
+                    <p style="margin-top: 20px;">People spend more money on weight loss, make money online, and relationship advice during peak buying season.</p>
+                    <p style="margin-top: 20px;"><strong>Students who started in Q4 last year made 2-3X more than students who started in Q2.</strong></p>
+                    <p style="margin-top: 20px; font-size: 1.5rem; color: #FFD700;"><strong>Miss this window? You'll wait another full year for these conversion rates.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity -->
+    <section class="urgency" style="background: var(--white);">
+        <div class="container">
+            <div class="urgency-box">
+                <h2>⚠️ REAL Scarcity (Not The Fake Kind) ⚠️</h2>
+                <div class="urgency-content">
+                    <p>I personally review every student's first campaign. I answer questions in weekly Q&A calls. I provide feedback in the community.</p>
+                    <p style="margin-top: 20px;"><strong>Right now, I can only support 50 active students at a time.</strong></p>
+                    <p style="margin-top: 20px;">More than that? I can't give everyone the attention they deserve.</p>
+                </div>
+                <div class="spots-remaining">
+                    Current enrollment: 37 students<br>
+                    <span style="color: #FF6B35;">Spots remaining: 13</span>
+                </div>
+                <p style="font-size: 1.2rem; margin-top: 20px;">Once these 13 spots fill... Enrollment closes until Q2 2025.</p>
+                <p style="font-size: 1.3rem; margin-top: 20px; color: #FFD700;"><strong>And when I reopen? The price will be $497 (not $297).</strong></p>
+                <a href="#payment" class="cta-button" style="margin-top: 30px;">
+                    👇 YES! Give Me The $300K Script Before The 13 Spots Fill 👇
+                    <span class="cta-subtext">(30-Day Test Drive - Q4 Window Closing)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️</div>
+                <h2>The "Test Drive" Guarantee (Zero Risk)</h2>
+                <p><strong>Here's how this works:</strong></p>
+                <p>Join Commission Jumpstart today. Go through Phase 1 and Phase 2. Build your funnel. Launch your ads.</p>
+                <p><strong>If after 30 days you don't believe this can get you to $1,000/day...</strong></p>
+                <p style="font-size: 1.4rem; color: var(--primary-color); font-weight: 700;">Email me and I'll refund every penny.</p>
+                <p>No questions asked. No hoops. No hassle.</p>
+                <p><strong>You risk absolutely nothing.</strong></p>
+                <p style="font-size: 1.3rem; margin-top: 20px;">Either this works and you make money... Or you get a full refund and keep everything you learned.</p>
+                <p style="font-size: 1.4rem; font-weight: 700; color: var(--success-color);">Win-win.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Paths -->
+    <section class="paths">
+        <div class="container">
+            <h2>You Have Two Paths Right Now</h2>
+            <div class="path-grid">
+                <div class="path-card bad">
+                    <h3 class="path-title">Path #1: Do Nothing</h3>
+                    <div class="path-content">
+                        <p>Close this page.</p>
+                        <p>Go back to your 9-5.</p>
+                        <p>Keep wishing you could make money online.</p>
+                        <p>Keep seeing others succeed while you stay stuck.</p>
+                        <p style="margin-top: 20px;"><strong>6 months from now?</strong></p>
+                        <p>You'll still be in the same place.</p>
+                        <p>Except now you're 6 months older.</p>
+                        <p>And 6 months further from your goals.</p>
+                        <p style="margin-top: 20px; font-size: 1.2rem; color: #FF6B6B;"><strong>Plus you missed Q4.</strong></p>
+                        <p>That's 12 months of watching others win while you wish you'd started.</p>
+                    </div>
+                </div>
+
+                <div class="path-card good">
+                    <h3 class="path-title">Path #2: Take The Test Drive</h3>
+                    <div class="path-content">
+                        <p>Click the button below.</p>
+                        <p>Join for $297 (or 3 x $99).</p>
+                        <p>Get the funnels, the ads, the $300K script.</p>
+                        <p>Build your first campaign in 14 days.</p>
+                        <p>Watch it generate your first commission.</p>
+                        <p style="margin-top: 20px;"><strong>Then scale to $1,000/day over the next 90 days.</strong></p>
+                        <p>Crush Q4 while others are sleeping.</p>
+                        <p>Make Black Friday/Cyber Monday your biggest profit days.</p>
+                        <p style="margin-top: 20px; font-size: 1.2rem;"><strong>Finally prove to yourself you CAN do this.</strong></p>
+                        <p><strong>Finally escape the 9-5 trap.</strong></p>
+                        <p><strong>Finally live on YOUR terms.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#payment" class="cta-button">
+                    👇 I'm Ready - Give Me The System For $297 👇
+                    <span class="cta-subtext">(30-Day Test Drive - 13 Spots Left)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: I've tried affiliate marketing before and failed. Why would THIS be different?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Because you were missing the 3 things that actually matter:</p>
+                        <p>(1) The Ninja Redirect Script that converts cold traffic at 6%+ (you didn't have this)<br>
+                        (2) Quiz funnels instead of boring landing pages (3X better conversion)<br>
+                        (3) My LIVE campaign dashboard showing you what's working RIGHT NOW (not outdated 2019 tactics)</p>
+                        <p>Past courses taught theory. This is a paint-by-numbers system. You're copying campaigns that are CURRENTLY profitable.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: Do I need tech skills or experience?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Nope. I started with ZERO experience and couldn't speak English. Every training includes click-by-click video walkthroughs. I assume you know nothing. If you can watch a YouTube video and follow along, you can do this.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: How much do I need for ads?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Start with $10-20/day ($300-600/month). Most students start here and scale to $100+/day as they become profitable. You don't need a huge budget. You need the RIGHT system.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: How long until I see my first commission?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Timeline:</p>
+                        <p>Week 1-2: Build your funnel<br>
+                        Week 3-4: Launch your ads<br>
+                        Week 4-6: First commissions (usually $50-300)<br>
+                        Week 6-12: Scale to $1,000/day</p>
+                        <p>Most students see their first commission within 30-45 days. Getting to $1,000/day usually takes 60-90 days if you follow the system.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: What niches does this work for?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> The "Big 3" on ClickBank:</p>
+                        <p>✅ Health (weight loss, muscle building, anti-aging)<br>
+                        ✅ Wealth (make money online, investing, side hustles)<br>
+                        ✅ Relationships (dating, marriage, breakups)</p>
+                        <p>I show you how to pick the best offers in each niche inside Phase 1.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: Is this a "get rich quick" scheme?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Hell no. Anyone promising "push button riches" is either lying or selling you a scam.</p>
+                        <p>This requires actual work: watching the training, building your funnel, launching your ads, optimizing your campaigns, following the system consistently.</p>
+                        <p><strong>But here's the thing:</strong> 90 days of focused work beats 5 years of "trying to figure it out" any day of the week.</p>
+                        <p>If you're looking for push-button riches, this isn't for you. If you're willing to invest 90 days of focused effort, this absolutely works.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Q: Do you offer refunds?
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>A:</strong> Yes. 30-day test drive guarantee. Try the system. If you're not happy for ANY reason, email support@profitavengers.com within 30 days. I'll refund you immediately. No questions. No hassle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Options -->
+    <section class="payment-options" id="payment">
+        <div class="container">
+            <h2>PAYMENT OPTIONS</h2>
+            <div class="payment-grid">
+                <div class="payment-card best-value">
+                    <div class="best-value-badge">BEST VALUE - SAVE $100</div>
+                    <h3 class="payment-title">💳 OPTION 1</h3>
+                    <div class="payment-price">$297</div>
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">One-Time Payment</p>
+                    <ul class="payment-features">
+                        <li>✅ Instant access to everything</li>
+                        <li>✅ No monthly payments</li>
+                        <li>✅ Own it forever</li>
+                        <li>✅ Same 30-day guarantee</li>
+                    </ul>
+                    <a href="#" class="cta-button" style="margin-top: 30px; width: 100%;">GET INSTANT ACCESS - $297</a>
+                </div>
+
+                <div class="payment-card">
+                    <h3 class="payment-title">💳 OPTION 2</h3>
+                    <div class="payment-price">$99<span style="font-size: 1.5rem;">/mo</span></div>
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">3 Payments</p>
+                    <ul class="payment-features">
+                        <li>✅ Instant access to everything</li>
+                        <li>✅ Easier on your budget</li>
+                        <li>✅ Auto-billed monthly</li>
+                        <li>✅ Same 30-day guarantee</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.9rem;">⚠️ Total: $297 (same price, just spread out)</p>
+                    <a href="#" class="cta-button" style="margin-top: 20px; width: 100%;">START FOR JUST $99</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="ps-section">
+                <p><strong>P.S.</strong> - Remember, you have a 30-day test drive. Try the system. If it doesn't work, get every penny back. The only way you lose is by NOT clicking that button.</p>
+            </div>
+
+            <div class="ps-section">
+                <p><strong>P.P.S.</strong> - Only 13 spots left before enrollment closes. Plus, Q4 is THE window for maximum commissions. Students who start in Q4 make 2-3X more than students who start in Q2. Miss this and you'll wait until October 2025 for these conversion rates again. Don't wait.</p>
+            </div>
+
+            <div class="ps-section">
+                <p><strong>P.P.P.S.</strong> - Still not sure? Email me personally: <strong>ross@profitavengers.com</strong> with subject "QUESTION" and I'll respond within 24 hours. But those 13 spots won't last through the weekend.</p>
+            </div>
+
+            <div style="margin: 60px 0 30px;">
+                <h3 style="font-size: 1.5rem; color: var(--primary-color);">Commission Jumpstart™</h3>
+                <p style="margin-top: 10px;">Created by Ross Minchev</p>
+            </div>
+
+            <div class="disclaimer">
+                <p>Results not guaranteed. Individual results vary. Most people make little to no money online. Your success depends on following the system consistently. Testimonials are real but not typical. The Q4 earnings increase is based on historical ClickBank data and student results from 2023, individual results may vary.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="container">
+            <a href="#payment" class="cta-button">
+                🔥 Get Commission Jumpstart - $297 (13 Spots Left)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Sticky CTA appear on scroll
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.getElementById('stickyCta');
+            if (window.scrollY > 800) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
