@@ -1,0 +1,315 @@
+---
+title: 'Order Confirmation'
+description: 'Confirm customer orders and build excitement'
+icon: 'receipt'
+---
+
+# Order Confirmation Email
+
+Send immediately after purchase to confirm the order and set delivery expectations.
+
+## Preview
+
+<Note>
+**Upload your design reference image here**
+
+Place your reference in: `/email-assets/reference-images/order-confirmation-reference.png`
+</Note>
+
+---
+
+## Template Specifications
+
+| Property | Value |
+|----------|-------|
+| Template Type | Transactional |
+| Layout | Single column with product list |
+| Primary CTA | Track Order / View Order |
+| Send Trigger | Immediately after purchase |
+| Open Rate | 60-70% (highest of all email types) |
+
+---
+
+## Email Copy Structure
+
+<Accordion title="Subject Line">
+  ```
+  ✅ Order Confirmed - #[ORDER_NUMBER]
+  Thanks for your order! Here's what's next
+  Order #[ORDER_NUMBER] is confirmed
+  ```
+</Accordion>
+
+<Accordion title="Content Sections">
+  ```
+  1. Thank you message
+  2. Order number & date
+  3. Estimated delivery date
+  4. Order items with images
+  5. Billing/shipping address
+  6. Order total
+  7. Customer support info
+  8. Cross-sell recommendations (optional)
+  ```
+</Accordion>
+
+---
+
+## HTML Template
+
+<CodeGroup>
+
+```html Order Confirmation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Arial, sans-serif;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Your order #{{ORDER_NUMBER}} is confirmed! Estimated delivery: {{DELIVERY_DATE}}
+    </div>
+
+    <!-- Container -->
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+
+                <!-- Content -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff;">
+
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 40px 40px 20px;">
+                            <img src="YOUR_LOGO_URL" alt="Logo" width="150" style="display: block; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Success Icon/Message -->
+                    <tr>
+                        <td align="center" style="padding: 20px 40px;">
+                            <!-- Success checkmark icon -->
+                            <div style="width: 64px; height: 64px; background-color: #00C851; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                <span style="color: #ffffff; font-size: 32px;">✓</span>
+                            </div>
+                            <h1 style="margin: 16px 0 8px; font-size: 28px; color: #000000; font-weight: 700;">
+                                Order Confirmed!
+                            </h1>
+                            <p style="margin: 0 0 24px; font-size: 16px; color: #666666;">
+                                Thanks for your order. We're getting it ready for you.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Order Details -->
+                    <tr>
+                        <td style="padding: 0 40px 20px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f9f9f9; border-radius: 8px;">
+                                <tr>
+                                    <td style="padding: 20px;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <p style="margin: 0; font-size: 14px; color: #999999;">Order Number</p>
+                                                    <p style="margin: 4px 0 0; font-size: 16px; color: #000000; font-weight: 600;">#{{ORDER_NUMBER}}</p>
+                                                </td>
+                                                <td align="right" style="padding: 8px 0;">
+                                                    <p style="margin: 0; font-size: 14px; color: #999999;">Order Date</p>
+                                                    <p style="margin: 4px 0 0; font-size: 16px; color: #000000; font-weight: 600;">{{ORDER_DATE}}</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding: 16px 0 8px; border-top: 1px solid #e0e0e0;">
+                                                    <p style="margin: 0; font-size: 14px; color: #999999;">Estimated Delivery</p>
+                                                    <p style="margin: 4px 0 0; font-size: 18px; color: #00C851; font-weight: 700;">{{DELIVERY_DATE}}</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="border-radius: 4px; background-color: #000000;">
+                                        <a href="YOUR_TRACKING_LINK" style="display: inline-block; padding: 16px 48px; font-size: 16px; color: #ffffff; text-decoration: none; font-weight: 600;">
+                                            Track Your Order
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Order Items -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <h2 style="margin: 0 0 16px; font-size: 20px; color: #000000; font-weight: 600;">
+                                Order Items
+                            </h2>
+
+                            <!-- Item 1 (Repeat for each item) -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 16px; border: 1px solid #eeeeee; border-radius: 8px;">
+                                <tr>
+                                    <td width="100" style="padding: 16px;">
+                                        <img src="PRODUCT_IMAGE_URL" alt="Product" width="80" height="80" style="display: block; border-radius: 4px;">
+                                    </td>
+                                    <td style="padding: 16px 16px 16px 0;">
+                                        <p style="margin: 0 0 4px; font-size: 16px; color: #000000; font-weight: 600;">Product Name</p>
+                                        <p style="margin: 0 0 8px; font-size: 14px; color: #666666;">Size: M | Color: Black</p>
+                                        <p style="margin: 0; font-size: 14px; color: #666666;">Qty: 1</p>
+                                    </td>
+                                    <td align="right" style="padding: 16px; vertical-align: top;">
+                                        <p style="margin: 0; font-size: 16px; color: #000000; font-weight: 600;">$XX.XX</p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Repeat above block for additional items -->
+
+                        </td>
+                    </tr>
+
+                    <!-- Order Summary -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #eeeeee; padding-top: 16px;">
+                                <tr>
+                                    <td style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #666666;">Subtotal</p>
+                                    </td>
+                                    <td align="right" style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #000000;">$XX.XX</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #666666;">Shipping</p>
+                                    </td>
+                                    <td align="right" style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #000000;">$X.XX</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #666666;">Tax</p>
+                                    </td>
+                                    <td align="right" style="padding: 6px 0;">
+                                        <p style="margin: 0; font-size: 14px; color: #000000;">$X.XX</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 16px 0 0; border-top: 2px solid #000000;">
+                                        <p style="margin: 0; font-size: 18px; color: #000000; font-weight: 700;">Total</p>
+                                    </td>
+                                    <td align="right" style="padding: 16px 0 0; border-top: 2px solid #000000;">
+                                        <p style="margin: 0; font-size: 18px; color: #000000; font-weight: 700;">$XXX.XX</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Shipping/Billing Info -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td width="50%" style="padding-right: 8px; vertical-align: top;">
+                                        <h3 style="margin: 0 0 12px; font-size: 16px; color: #000000; font-weight: 600;">Shipping Address</h3>
+                                        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #666666;">
+                                            {{CUSTOMER_NAME}}<br>
+                                            {{ADDRESS_LINE_1}}<br>
+                                            {{ADDRESS_LINE_2}}<br>
+                                            {{CITY}}, {{STATE}} {{ZIP}}
+                                        </p>
+                                    </td>
+                                    <td width="50%" style="padding-left: 8px; vertical-align: top;">
+                                        <h3 style="margin: 0 0 12px; font-size: 16px; color: #000000; font-weight: 600;">Payment Method</h3>
+                                        <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #666666;">
+                                            {{PAYMENT_METHOD}}<br>
+                                            Ending in {{LAST_4_DIGITS}}
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Support -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #f9f9f9; border-top: 1px solid #eeeeee;">
+                            <h3 style="margin: 0 0 12px; font-size: 16px; color: #000000; font-weight: 600;">Need Help?</h3>
+                            <p style="margin: 0 0 12px; font-size: 14px; color: #666666;">
+                                Our customer support team is here to help with any questions about your order.
+                            </p>
+                            <p style="margin: 0; font-size: 14px; color: #666666;">
+                                <a href="mailto:support@yourbrand.com" style="color: #000000; text-decoration: none; font-weight: 600;">support@yourbrand.com</a> |
+                                <a href="tel:+1234567890" style="color: #000000; text-decoration: none; font-weight: 600;">+1 (234) 567-890</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 32px 40px;">
+                            <p style="margin: 0 0 8px; font-size: 12px; color: #999999;">
+                                © 2024 Your Brand. All rights reserved.
+                            </p>
+                            <p style="margin: 0; font-size: 12px; color: #999999;">
+                                123 Street, City, State 12345
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+```
+
+</CodeGroup>
+
+---
+
+## Dynamic Variables
+
+Replace these with your e-commerce platform's merge tags:
+
+| Variable | Example | Description |
+|----------|---------|-------------|
+| {{ORDER_NUMBER}} | #ORD-12345 | Unique order ID |
+| {{ORDER_DATE}} | Nov 18, 2024 | Purchase date |
+| {{DELIVERY_DATE}} | Nov 22-25, 2024 | Estimated delivery |
+| {{CUSTOMER_NAME}} | John Doe | Customer name |
+| {{PRODUCT_IMAGE_URL}} | https://... | Product image |
+| {{TRACKING_LINK}} | https://... | Order tracking URL |
+
+---
+
+## Best Practices
+
+<Tip>
+  **Send Immediately**: Customers expect this email within seconds of purchase
+</Tip>
+
+<Warning>
+  **Include All Details**: Order number, items, total, and shipping info are essential
+</Warning>
+
+<Tip>
+  **Cross-sell Opportunity**: Add a "You might also like" section (but keep it subtle)
+</Tip>

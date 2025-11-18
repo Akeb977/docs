@@ -1,0 +1,396 @@
+---
+title: 'Sale Announcement'
+description: 'Promotional emails to drive sales and revenue'
+icon: 'tag'
+---
+
+# Sale Announcement Email
+
+Drive urgency and conversions with compelling sale announcements.
+
+## Preview
+
+<Note>
+**Upload your design reference**
+
+Place your reference in: `/email-assets/reference-images/sale-announcement-reference.png`
+</Note>
+
+---
+
+## Template Specifications
+
+| Property | Value |
+|----------|-------|
+| Template Type | Promotional |
+| Layout | Hero image + featured products |
+| Primary CTA | Shop Now / Shop the Sale |
+| Best Send Day | Tuesday-Thursday |
+| Best Send Time | 10 AM or 6 PM local time |
+
+---
+
+## Email Copy
+
+<Accordion title="Subject Lines">
+  ```
+  🔥 48-Hour Flash Sale: Up to 50% Off
+  SALE ALERT: Your favorites are now on sale
+  Don't miss this: [XX]% off everything
+  Weekend Sale Starts Now! 🎉
+  Ends Tonight: Extra 20% off sale items
+  ```
+</Accordion>
+
+<Accordion title="Copy Structure">
+  ```
+  1. Bold headline with discount %
+  2. Sale duration (creates urgency)
+  3. Key benefits/what's on sale
+  4. Featured products
+  5. Clear CTA
+  6. Sale terms/exclusions (small print)
+  ```
+</Accordion>
+
+---
+
+## HTML Template
+
+<CodeGroup>
+
+```html Sale Announcement
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Announcement</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Arial, sans-serif;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Up to 50% off your favorites! Shop now before it's gone. Ends {{SALE_END_DATE}}
+    </div>
+
+    <!-- Container -->
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 20px;">
+
+                <!-- Announcement Banner -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px;">
+                    <tr>
+                        <td align="center" style="background-color: #DC3545; padding: 12px; border-radius: 8px 8px 0 0;">
+                            <p style="margin: 0; font-size: 14px; color: #ffffff; font-weight: 700; text-transform: uppercase;">
+                                ⚡ Flash Sale - Ends {{SALE_END_DATE}} ⚡
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Main Content -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff;">
+
+                    <!-- Header / Logo -->
+                    <tr>
+                        <td align="center" style="padding: 30px 40px 20px;">
+                            <img src="YOUR_LOGO_URL" alt="Logo" width="150" style="display: block; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Hero Section -->
+                    <tr>
+                        <td style="padding: 0;">
+                            <!-- Hero Image with Text Overlay (or separate sections) -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="position: relative; padding: 60px 40px; background-image: url('YOUR_HERO_IMAGE_URL'); background-size: cover; background-position: center;">
+                                        <!-- If using solid background instead of image -->
+                                        <!-- <td align="center" style="padding: 60px 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"> -->
+
+                                        <h1 style="margin: 0 0 16px; font-size: 48px; line-height: 1.1; color: #ffffff; font-weight: 900; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                            UP TO 50% OFF
+                                        </h1>
+                                        <p style="margin: 0 0 32px; font-size: 20px; color: #ffffff; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                                            Your Favorite Styles on Sale Now
+                                        </p>
+
+                                        <!-- CTA in Hero -->
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="border-radius: 50px; background-color: #000000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                                                    <a href="YOUR_SALE_URL" style="display: inline-block; padding: 18px 48px; font-size: 18px; color: #ffffff; text-decoration: none; font-weight: 700; border-radius: 50px;">
+                                                        Shop The Sale
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Sale Details -->
+                    <tr>
+                        <td style="padding: 40px 40px 20px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" width="33%" style="padding: 16px;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 8px; font-size: 36px; color: #DC3545; font-weight: 900;">50%</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; text-transform: uppercase; font-weight: 600;">Max Savings</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="33%" style="padding: 16px; border-left: 1px solid #eeeeee; border-right: 1px solid #eeeeee;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 8px; font-size: 36px; color: #DC3545; font-weight: 900;">48hr</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; text-transform: uppercase; font-weight: 600;">Only</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="33%" style="padding: 16px;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 8px; font-size: 36px; color: #DC3545; font-weight: 900;">Free</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; text-transform: uppercase; font-weight: 600;">Shipping</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Section Header -->
+                    <tr>
+                        <td style="padding: 40px 40px 24px;">
+                            <h2 style="margin: 0; font-size: 24px; color: #000000; font-weight: 700; text-align: center;">
+                                Shop By Category
+                            </h2>
+                        </td>
+                    </tr>
+
+                    <!-- Category Grid (2-column on desktop) -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <!-- Category 1 -->
+                                    <td width="50%" style="padding-right: 8px; padding-bottom: 16px;">
+                                        <a href="YOUR_CATEGORY_URL" style="text-decoration: none; display: block;">
+                                            <img src="CATEGORY_IMAGE_1" alt="Category" width="100%" style="display: block; border-radius: 8px; margin-bottom: 8px;">
+                                            <p style="margin: 0; font-size: 16px; color: #000000; font-weight: 600; text-align: center;">Women's</p>
+                                            <p style="margin: 4px 0 0; font-size: 14px; color: #DC3545; font-weight: 700; text-align: center;">Up to 40% off</p>
+                                        </a>
+                                    </td>
+                                    <!-- Category 2 -->
+                                    <td width="50%" style="padding-left: 8px; padding-bottom: 16px;">
+                                        <a href="YOUR_CATEGORY_URL" style="text-decoration: none; display: block;">
+                                            <img src="CATEGORY_IMAGE_2" alt="Category" width="100%" style="display: block; border-radius: 8px; margin-bottom: 8px;">
+                                            <p style="margin: 0; font-size: 16px; color: #000000; font-weight: 600; text-align: center;">Men's</p>
+                                            <p style="margin: 4px 0 0; font-size: 14px; color: #DC3545; font-weight: 700; text-align: center;">Up to 50% off</p>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Category 3 -->
+                                    <td width="50%" style="padding-right: 8px;">
+                                        <a href="YOUR_CATEGORY_URL" style="text-decoration: none; display: block;">
+                                            <img src="CATEGORY_IMAGE_3" alt="Category" width="100%" style="display: block; border-radius: 8px; margin-bottom: 8px;">
+                                            <p style="margin: 0; font-size: 16px; color: #000000; font-weight: 600; text-align: center;">Accessories</p>
+                                            <p style="margin: 4px 0 0; font-size: 14px; color: #DC3545; font-weight: 700; text-align: center;">Up to 30% off</p>
+                                        </a>
+                                    </td>
+                                    <!-- Category 4 -->
+                                    <td width="50%" style="padding-left: 8px;">
+                                        <a href="YOUR_CATEGORY_URL" style="text-decoration: none; display: block;">
+                                            <img src="CATEGORY_IMAGE_4" alt="Category" width="100%" style="display: block; border-radius: 8px; margin-bottom: 8px;">
+                                            <p style="margin: 0; font-size: 16px; color: #000000; font-weight: 600; text-align: center;">New Arrivals</p>
+                                            <p style="margin: 4px 0 0; font-size: 14px; color: #DC3545; font-weight: 700; text-align: center;">Up to 20% off</p>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Final CTA -->
+                    <tr>
+                        <td align="center" style="padding: 20px 40px 40px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="background-color: #000000; border-radius: 4px; padding: 20px;">
+                                        <p style="margin: 0 0 12px; font-size: 18px; color: #ffffff; font-weight: 700;">
+                                            Sale Ends in:
+                                        </p>
+                                        <!-- Countdown timer (use dynamic content from ESP) -->
+                                        <p style="margin: 0 0 16px; font-size: 32px; color: #ffffff; font-weight: 900; letter-spacing: 2px;">
+                                            {{COUNTDOWN_TIMER}}
+                                        </p>
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td style="border-radius: 4px; background-color: #DC3545;">
+                                                    <a href="YOUR_SALE_URL" style="display: inline-block; padding: 16px 48px; font-size: 16px; color: #ffffff; text-decoration: none; font-weight: 700;">
+                                                        Shop Now
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Terms -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #f9f9f9; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0; font-size: 11px; line-height: 1.5; color: #999999; text-align: center;">
+                                *Sale ends {{SALE_END_DATE}}. Discount applied automatically at checkout. Some exclusions apply. Cannot be combined with other offers. While supplies last.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 32px 40px;">
+                            <p style="margin: 0 0 8px; font-size: 12px; color: #999999;">
+                                © 2024 Your Brand. All rights reserved.
+                            </p>
+                            <p style="margin: 0; font-size: 12px; color: #999999;">
+                                <a href="YOUR_UNSUBSCRIBE_LINK" style="color: #999999; text-decoration: underline;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+```
+
+</CodeGroup>
+
+---
+
+## Sale Type Variations
+
+<Tabs>
+  <Tab title="Flash Sale">
+    - Duration: 24-48 hours
+    - Higher urgency messaging
+    - Countdown timers essential
+    - Best for: Moving inventory fast
+  </Tab>
+
+  <Tab title="Weekend Sale">
+    - Duration: Friday-Sunday
+    - More relaxed messaging
+    - Focus on browsing experience
+    - Best for: Regular promotions
+  </Tab>
+
+  <Tab title="Seasonal Sale">
+    - Duration: 1-2 weeks
+    - Thematic imagery
+    - Category-specific discounts
+    - Best for: End of season clearance
+  </Tab>
+
+  <Tab title="VIP Early Access">
+    - Duration: 2-3 days before public
+    - Exclusive messaging
+    - Loyalty rewards emphasis
+    - Best for: Customer retention
+  </Tab>
+</Tabs>
+
+---
+
+## Design Tips
+
+<Tip>
+  **Use Bold Colors**: Red, orange, and yellow create urgency and attract attention
+</Tip>
+
+<Tip>
+  **Countdown Timers**: Add real-time countdown using your ESP's dynamic content
+</Tip>
+
+<Warning>
+  **Don't Overuse**: Too many sales devalue your brand. Use strategically
+</Warning>
+
+<Tip>
+  **Mobile-First Design**: 60%+ of sale emails are opened on mobile
+</Tip>
+
+---
+
+## A/B Testing Ideas
+
+Test these elements to optimize performance:
+
+1. **Subject Lines**
+   - Emoji vs no emoji
+   - Discount percentage vs dollar amount
+   - Urgency language variations
+
+2. **Hero Image**
+   - Lifestyle vs product-focused
+   - Text overlay vs separate headline
+   - Dark vs light background
+
+3. **CTA Placement**
+   - Hero only vs multiple CTAs
+   - Button color variations
+   - Button copy ("Shop Now" vs "Shop Sale")
+
+4. **Discount Display**
+   - "Up to X% off" vs "X% off everything"
+   - Percentage vs dollar savings
+   - Code required vs automatic
+
+---
+
+## Best Practices
+
+<Steps>
+  <Step title="Set Expectations">
+    Clearly state sale duration and terms upfront
+  </Step>
+
+  <Step title="Create Urgency">
+    Use countdown timers and "while supplies last" messaging
+  </Step>
+
+  <Step title="Segment Your List">
+    Send VIP/loyal customers early access
+  </Step>
+
+  <Step title="Mobile Optimize">
+    Test on all major mobile email clients
+  </Step>
+
+  <Step title="Follow Up">
+    Send reminder email 24hrs before sale ends
+  </Step>
+</Steps>
+
+---
+
+## Performance Benchmarks
+
+Track these metrics:
+
+| Metric | Good | Excellent |
+|--------|------|-----------|
+| Open Rate | 20-25% | 30%+ |
+| Click Rate | 3-5% | 7%+ |
+| Conversion Rate | 1-2% | 3%+ |
+| Revenue Per Email | $0.10-0.50 | $1.00+ |

@@ -1,0 +1,376 @@
+---
+title: 'Abandoned Cart'
+description: 'Recover lost sales with strategic cart recovery emails'
+icon: 'cart-shopping'
+---
+
+# Abandoned Cart Email
+
+Remind customers about items left in their cart and encourage them to complete their purchase.
+
+## Strategy
+
+Send a series of 3 emails:
+1. **1 hour later**: Gentle reminder
+2. **24 hours later**: Add urgency (limited stock, discount)
+3. **72 hours later**: Last chance with incentive
+
+## Preview
+
+<Note>
+**Upload your design reference**
+
+Place your reference in: `/email-assets/reference-images/abandoned-cart-reference.png`
+</Note>
+
+---
+
+## Template Specifications
+
+| Property | Value |
+|----------|-------|
+| Template Type | Retention / Cart Recovery |
+| Layout | Single column with cart items |
+| Primary CTA | Complete Your Order |
+| Average Recovery Rate | 10-15% |
+| Best Send Time | 1 hour after abandonment |
+
+---
+
+## Email Copy
+
+<Accordion title="Subject Lines - Email 1 (1 Hour)">
+  ```
+  You left something behind...
+  Don't forget about these! 👀
+  Your cart is waiting for you
+  Still thinking it over?
+  ```
+</Accordion>
+
+<Accordion title="Subject Lines - Email 2 (24 Hours)">
+  ```
+  Hurry! Your items are selling fast
+  Save 10% when you complete your order today
+  These won't last long ⏰
+  ```
+</Accordion>
+
+<Accordion title="Subject Lines - Email 3 (72 Hours)">
+  ```
+  Last chance: 15% off your cart
+  Your cart expires tonight!
+  We saved these for you...but not for long
+  ```
+</Accordion>
+
+---
+
+## HTML Template - Email 1 (Gentle Reminder)
+
+<CodeGroup>
+
+```html Abandoned Cart Recovery
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abandoned Cart</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Arial, sans-serif;">
+
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Complete your purchase now! Your items are waiting.
+    </div>
+
+    <!-- Container -->
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+
+                <!-- Content -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff;">
+
+                    <!-- Header -->
+                    <tr>
+                        <td align="center" style="padding: 40px 40px 20px;">
+                            <img src="YOUR_LOGO_URL" alt="Logo" width="150" style="display: block; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Main Message -->
+                    <tr>
+                        <td style="padding: 20px 40px;">
+                            <h1 style="margin: 0 0 16px; font-size: 28px; line-height: 1.2; color: #000000; font-weight: 700;">
+                                You Left Something Behind
+                            </h1>
+                            <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #666666;">
+                                Good news! The items in your cart are still available. Complete your order before they're gone.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Cart Items -->
+                    <tr>
+                        <td style="padding: 0 40px 24px;">
+                            <h2 style="margin: 0 0 16px; font-size: 18px; color: #000000; font-weight: 600;">
+                                Items in Your Cart
+                            </h2>
+
+                            <!-- Cart Item (Repeat for each) -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 16px; border: 1px solid #eeeeee; border-radius: 8px;">
+                                <tr>
+                                    <td width="120" style="padding: 16px;">
+                                        <img src="PRODUCT_IMAGE_URL" alt="Product" width="100" height="100" style="display: block; border-radius: 8px;">
+                                    </td>
+                                    <td style="padding: 16px 0;">
+                                        <p style="margin: 0 0 8px; font-size: 16px; color: #000000; font-weight: 600;">
+                                            Product Name
+                                        </p>
+                                        <p style="margin: 0 0 4px; font-size: 14px; color: #666666;">
+                                            Size: M | Color: Black
+                                        </p>
+                                        <p style="margin: 0; font-size: 14px; color: #666666;">
+                                            Qty: 1
+                                        </p>
+                                    </td>
+                                    <td align="right" style="padding: 16px; vertical-align: top;">
+                                        <p style="margin: 0; font-size: 18px; color: #000000; font-weight: 700;">
+                                            $XX.XX
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Cart Total -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 16px; padding-top: 16px; border-top: 2px solid #eeeeee;">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; font-size: 18px; color: #000000; font-weight: 700;">
+                                            Cart Total
+                                        </p>
+                                    </td>
+                                    <td align="right">
+                                        <p style="margin: 0; font-size: 24px; color: #000000; font-weight: 700;">
+                                            $XXX.XX
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 40px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="border-radius: 4px; background-color: #000000;">
+                                        <a href="YOUR_CART_URL" style="display: inline-block; padding: 18px 56px; font-size: 18px; color: #ffffff; text-decoration: none; font-weight: 700;">
+                                            Complete My Order
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin: 16px 0 0; font-size: 14px; color: #999999;">
+                                Free shipping on orders over $50
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Trust Signals (Optional) -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #f9f9f9; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" width="33%" style="padding: 0 8px;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 4px; font-size: 24px;">🚚</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; font-weight: 600;">Free Shipping</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="33%" style="padding: 0 8px;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 4px; font-size: 24px;">↩️</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; font-weight: 600;">Easy Returns</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" width="33%" style="padding: 0 8px;">
+                                        <div style="text-align: center;">
+                                            <p style="margin: 0 0 4px; font-size: 24px;">🔒</p>
+                                            <p style="margin: 0; font-size: 12px; color: #666666; font-weight: 600;">Secure Checkout</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Support -->
+                    <tr>
+                        <td style="padding: 32px 40px;">
+                            <h3 style="margin: 0 0 12px; font-size: 16px; color: #000000; font-weight: 600;">
+                                Need Help Deciding?
+                            </h3>
+                            <p style="margin: 0 0 12px; font-size: 14px; color: #666666;">
+                                Our team is here to answer any questions you have.
+                            </p>
+                            <p style="margin: 0; font-size: 14px;">
+                                <a href="mailto:support@yourbrand.com" style="color: #000000; font-weight: 600; text-decoration: none;">
+                                    Contact Support →
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 32px 40px; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0 0 8px; font-size: 12px; color: #999999;">
+                                © 2024 Your Brand. All rights reserved.
+                            </p>
+                            <p style="margin: 0; font-size: 12px; color: #999999;">
+                                <a href="YOUR_UNSUBSCRIBE_LINK" style="color: #999999; text-decoration: underline;">Unsubscribe</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+```
+
+```html Email 2 - With Discount (24hrs)
+<!-- Add urgency and incentive -->
+<tr>
+    <td style="padding: 20px 40px;">
+        <!-- Urgency Badge -->
+        <div style="display: inline-block; background-color: #FF5733; color: #ffffff; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 16px;">
+            ⚡ Limited Stock Alert
+        </div>
+
+        <h1 style="margin: 0 0 16px; font-size: 28px; line-height: 1.2; color: #000000; font-weight: 700;">
+            These Are Selling Fast!
+        </h1>
+        <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #666666;">
+            Don't miss out! Complete your order now and save <strong>10% with code COMEBACK10</strong>
+        </p>
+    </td>
+</tr>
+
+<!-- Discount Code Box -->
+<tr>
+    <td align="center" style="padding: 0 40px 32px;">
+        <div style="background-color: #fff9e6; border: 2px dashed #FFB800; padding: 20px; border-radius: 8px; text-align: center;">
+            <p style="margin: 0 0 8px; font-size: 14px; color: #666666;">Use this code at checkout:</p>
+            <p style="margin: 0; font-size: 28px; font-weight: 700; color: #000000; letter-spacing: 2px;">COMEBACK10</p>
+            <p style="margin: 8px 0 0; font-size: 12px; color: #999999;">Expires in 24 hours</p>
+        </div>
+    </td>
+</tr>
+```
+
+```html Email 3 - Final Attempt (72hrs)
+<!-- Last chance messaging -->
+<tr>
+    <td style="padding: 20px 40px;">
+        <div style="display: inline-block; background-color: #DC3545; color: #ffffff; padding: 8px 16px; border-radius: 4px; font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 16px;">
+            🕐 Last Chance
+        </div>
+
+        <h1 style="margin: 0 0 16px; font-size: 28px; line-height: 1.2; color: #000000; font-weight: 700;">
+            Your Cart Expires Tonight
+        </h1>
+        <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.6; color: #666666;">
+            This is your final reminder! Save <strong>15%</strong> when you complete your order today.
+        </p>
+        <p style="margin: 0 0 24px; font-size: 14px; line-height: 1.6; color: #999999;">
+            After tonight, we can't guarantee these items will still be available at this price.
+        </p>
+    </td>
+</tr>
+```
+
+</CodeGroup>
+
+---
+
+## Email Sequence Strategy
+
+<Steps>
+  <Step title="Email 1 - Reminder (1 hour)">
+    **Goal**: Gentle reminder without pressure
+    - No discount
+    - Helpful tone
+    - Simple "You forgot something" message
+  </Step>
+
+  <Step title="Email 2 - Urgency (24 hours)">
+    **Goal**: Add motivation with small discount
+    - 10% discount code
+    - Limited stock messaging
+    - Social proof (if available)
+  </Step>
+
+  <Step title="Email 3 - Final Attempt (72 hours)">
+    **Goal**: Last chance with best offer
+    - 15% discount code
+    - Expiration urgency
+    - "Cart will be cleared" message
+  </Step>
+</Steps>
+
+---
+
+## Dynamic Variables
+
+| Variable | Description |
+|----------|-------------|
+| {{CART_URL}} | Direct link to customer's cart |
+| {{PRODUCT_IMAGE}} | Cart item images |
+| {{PRODUCT_NAME}} | Item names |
+| {{CART_TOTAL}} | Total cart value |
+| {{DISCOUNT_CODE}} | Unique discount code |
+
+---
+
+## Best Practices
+
+<Tip>
+  **Timing is Critical**: Send the first email within 1 hour for maximum recovery
+</Tip>
+
+<Warning>
+  **Don't Overdo It**: 3 emails max. More feels spammy and reduces effectiveness
+</Warning>
+
+<Tip>
+  **Test Discount Amounts**: A/B test 10% vs 15% vs free shipping to find what converts best
+</Tip>
+
+<Tip>
+  **Mobile Optimization**: 70% of cart abandonments happen on mobile - test thoroughly!
+</Tip>
+
+---
+
+## Performance Metrics
+
+Track these KPIs:
+- **Recovery Rate**: % of abandoned carts that convert
+- **Revenue Per Email**: Total recovered revenue / emails sent
+- **Click-Through Rate**: % who click "Complete Order"
+- **Time to Conversion**: How long after receiving email do they purchase
+
+Average industry benchmarks:
+- Recovery rate: 10-15%
+- Open rate: 40-45%
+- Click rate: 15-20%

@@ -1,0 +1,306 @@
+---
+title: 'Welcome Email'
+description: 'First email to greet new subscribers'
+icon: 'hand-wave'
+---
+
+# Welcome Email Template
+
+The welcome email is your first impression. Make it count with a warm greeting and clear next steps.
+
+## Preview
+
+<Note>
+**Upload your design reference image here**
+
+Place your template reference image in: `/email-assets/reference-images/welcome-email-reference.png`
+
+Then update this section with:
+```mdx
+<img src="/email-assets/reference-images/welcome-email-reference.png" alt="Welcome Email Design" />
+```
+</Note>
+
+---
+
+## Template Specifications
+
+| Property | Value |
+|----------|-------|
+| Template Type | Welcome / Onboarding |
+| Layout | Single column |
+| Primary CTA | Shop Now / Explore |
+| Average Open Rate | 50-60% |
+| Best Send Time | Immediately after signup |
+
+---
+
+## Email Copy
+
+<Accordion title="Subject Line Options">
+  ```
+  1. Welcome to [Brand Name]! Here's 15% off 🎉
+  2. You're in! Here's what happens next...
+  3. Welcome! Let's get you started
+  ```
+</Accordion>
+
+<Accordion title="Preheader Text">
+  ```
+  Thanks for joining us! Here's a special gift to get you started →
+  ```
+</Accordion>
+
+<Accordion title="Email Body Copy">
+  **Replace with your actual copy:**
+
+  ```
+  [HEADLINE]
+  Welcome to the Family!
+
+  [SUBHEADLINE]
+  We're thrilled to have you here. As a thank you,
+  enjoy 15% off your first order.
+
+  [BODY TEXT]
+  At [Brand Name], we're passionate about [what you do].
+  Explore our collection and find your new favorites.
+
+  [CTA]
+  Shop Now
+
+  [SECONDARY TEXT]
+  Not ready to shop? Follow us on social media for
+  daily inspiration and exclusive sneak peeks.
+  ```
+</Accordion>
+
+---
+
+## HTML Template
+
+### Mobile + Desktop Responsive Version
+
+<CodeGroup>
+
+```html Desktop View
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Email</title>
+    <style>
+        /* Reset styles for email clients */
+        body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', Arial, sans-serif;">
+
+    <!-- Preheader Text (hidden) -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Thanks for joining us! Here's a special gift to get you started →
+    </div>
+
+    <!-- Email Container -->
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f5f5f5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+
+                <!-- Email Content Table (600px max width) -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff;">
+
+                    <!-- Header / Logo -->
+                    <tr>
+                        <td align="center" style="padding: 40px 20px 20px;">
+                            <!-- REPLACE WITH YOUR LOGO -->
+                            <img src="YOUR_LOGO_URL_HERE" alt="Brand Logo" width="150" style="display: block; max-width: 150px; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Hero Image -->
+                    <tr>
+                        <td align="center" style="padding: 0;">
+                            <!-- REPLACE WITH YOUR HERO IMAGE -->
+                            <img src="YOUR_HERO_IMAGE_URL_HERE" alt="Welcome" width="600" style="display: block; width: 100%; max-width: 600px; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Main Content -->
+                    <tr>
+                        <td style="padding: 40px 40px 20px;">
+                            <!-- Headline -->
+                            <h1 style="margin: 0 0 16px; font-size: 32px; line-height: 1.2; color: #000000; font-weight: 700;">
+                                Welcome to the Family!
+                            </h1>
+
+                            <!-- Subheadline -->
+                            <p style="margin: 0 0 24px; font-size: 18px; line-height: 1.5; color: #333333;">
+                                We're thrilled to have you here. As a thank you, enjoy <strong>15% off</strong> your first order.
+                            </p>
+
+                            <!-- Body Text -->
+                            <p style="margin: 0 0 32px; font-size: 16px; line-height: 1.6; color: #666666;">
+                                At [Brand Name], we're passionate about creating exceptional products. Explore our collection and find your new favorites.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 40px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="border-radius: 4px; background-color: #000000;">
+                                        <a href="YOUR_CTA_LINK_HERE" target="_blank" style="display: inline-block; padding: 16px 48px; font-size: 16px; color: #ffffff; text-decoration: none; font-weight: 600; border-radius: 4px;">
+                                            Shop Now
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Discount Code (Optional) -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 40px;">
+                            <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; border: 2px dashed #cccccc;">
+                                <p style="margin: 0 0 8px; font-size: 14px; color: #666666;">Use code at checkout:</p>
+                                <p style="margin: 0; font-size: 24px; font-weight: 700; color: #000000; letter-spacing: 2px;">WELCOME15</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Social Media -->
+                    <tr>
+                        <td align="center" style="padding: 40px 40px 20px; border-top: 1px solid #eeeeee;">
+                            <p style="margin: 0 0 16px; font-size: 14px; color: #999999;">Follow us:</p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Social icons - replace with your links -->
+                                    <td style="padding: 0 8px;">
+                                        <a href="YOUR_INSTAGRAM_URL" target="_blank">
+                                            <img src="INSTAGRAM_ICON_URL" alt="Instagram" width="32" height="32" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 8px;">
+                                        <a href="YOUR_FACEBOOK_URL" target="_blank">
+                                            <img src="FACEBOOK_ICON_URL" alt="Facebook" width="32" height="32" style="display: block;">
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 8px;">
+                                        <a href="YOUR_TWITTER_URL" target="_blank">
+                                            <img src="TWITTER_ICON_URL" alt="Twitter" width="32" height="32" style="display: block;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 20px 40px 40px;">
+                            <p style="margin: 0 0 8px; font-size: 12px; line-height: 1.5; color: #999999;">
+                                © 2024 [Your Brand Name]. All rights reserved.
+                            </p>
+                            <p style="margin: 0 0 8px; font-size: 12px; line-height: 1.5; color: #999999;">
+                                123 Your Street, City, State 12345
+                            </p>
+                            <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #999999;">
+                                <a href="YOUR_UNSUBSCRIBE_LINK" style="color: #999999; text-decoration: underline;">Unsubscribe</a> |
+                                <a href="YOUR_PREFERENCES_LINK" style="color: #999999; text-decoration: underline;">Preferences</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- End Email Content Table -->
+
+            </td>
+        </tr>
+    </table>
+    <!-- End Email Container -->
+
+</body>
+</html>
+```
+
+</CodeGroup>
+
+---
+
+## Assets Needed
+
+<Steps>
+  <Step title="Logo">
+    Upload your logo to `/email-assets/logos/`
+    - Format: PNG with transparent background
+    - Recommended size: 300px x 100px (adjust ratio as needed)
+    - Max file size: 50KB
+  </Step>
+
+  <Step title="Hero Image">
+    Upload your hero image to `/email-assets/images/`
+    - Format: JPG optimized
+    - Size: 1200px x 600px (will scale to 600px width)
+    - Max file size: 150KB
+  </Step>
+
+  <Step title="Social Icons">
+    Upload social media icons to `/email-assets/icons/`
+    - Format: PNG or SVG
+    - Size: 64px x 64px (will display at 32px)
+  </Step>
+
+  <Step title="Copy Document">
+    Save your finalized copy to `/email-assets/copy/welcome-email-copy.txt`
+  </Step>
+</Steps>
+
+---
+
+## Figma Import Instructions
+
+1. **Create New Figma File**
+2. **Install HTML to Figma Plugin** (or manually recreate)
+3. **Copy HTML Code** from above
+4. **Paste into Plugin** or use as reference
+5. **Replace Placeholder Images** with your actual assets
+6. **Adjust Colors** to match your brand
+7. **Export Frames** for client presentation
+
+---
+
+## Customization Checklist
+
+Before deploying this template:
+
+- [ ] Replace all placeholder images (logo, hero, icons)
+- [ ] Update all copy and subject lines
+- [ ] Change brand colors in CSS (search for #000000)
+- [ ] Add your CTA links
+- [ ] Insert discount code (if applicable)
+- [ ] Add social media links
+- [ ] Update footer with company info
+- [ ] Add tracking parameters to links
+- [ ] Test on multiple email clients
+- [ ] Send test email to yourself
+
+---
+
+## Performance Tips
+
+<Tip>
+  **Optimize Images**: Use tools like TinyPNG to compress images by 50-70% without quality loss
+</Tip>
+
+<Tip>
+  **A/B Test Subject Lines**: Try personalizing with first name or varying the discount mention
+</Tip>
+
+<Tip>
+  **Send Timing**: Welcome emails perform best when sent within 5 minutes of signup
+</Tip>

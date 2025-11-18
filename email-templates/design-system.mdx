@@ -1,0 +1,169 @@
+---
+title: 'Design System'
+description: 'Design guidelines and specifications for email templates'
+icon: 'palette'
+---
+
+# Email Design System
+
+This design system ensures consistency across all email templates while maintaining flexibility for brand customization.
+
+## Layout Specifications
+
+### Container Widths
+```
+Desktop Max Width: 600px
+Mobile Max Width: 100% (fluid)
+Content Padding: 20px (mobile), 40px (desktop)
+```
+
+### Grid System
+- **Single Column**: Mobile-first, stacks vertically
+- **Two Column**: Desktop layout for product showcases
+- **Three Column**: Footer links and social media
+
+## Typography
+
+### Recommended Font Stacks
+
+```css
+/* Primary Font (Sans-serif) */
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+             'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+/* Headings */
+H1: 28-32px, bold
+H2: 24-26px, bold
+H3: 18-20px, semi-bold
+Body: 16px, regular
+Small: 14px, regular
+```
+
+### Line Heights
+- Headings: 1.2-1.3
+- Body text: 1.5-1.6
+- Small text: 1.4
+
+## Color Palette
+
+Define your brand colors here. Example structure:
+
+<CardGroup cols={3}>
+  <Card title="Primary" icon="circle">
+    **Brand Color**
+    - Hex: #000000
+    - Use: CTAs, Headers
+  </Card>
+
+  <Card title="Secondary" icon="circle">
+    **Accent Color**
+    - Hex: #666666
+    - Use: Links, Icons
+  </Card>
+
+  <Card title="Neutral" icon="circle">
+    **Background**
+    - Hex: #F5F5F5
+    - Use: Backgrounds
+  </Card>
+</CardGroup>
+
+## Spacing System
+
+Consistent spacing creates visual harmony:
+
+```
+4px unit system:
+- XS: 8px
+- SM: 16px
+- MD: 24px
+- LG: 32px
+- XL: 48px
+- XXL: 64px
+```
+
+## Buttons (CTAs)
+
+### Primary Button
+```css
+Background: Brand Primary Color
+Text: White
+Padding: 14px 32px
+Border-radius: 4px
+Font-size: 16px
+Font-weight: 600
+Min-width: 200px
+```
+
+### Secondary Button
+```css
+Background: Transparent
+Border: 2px solid Brand Color
+Text: Brand Color
+Padding: 12px 30px
+```
+
+## Image Guidelines
+
+### Product Images
+- **Format**: JPG (optimized)
+- **Size**: 600px wide (max)
+- **Aspect Ratio**: 1:1 for products, 16:9 for banners
+- **Alt Text**: Always include for accessibility
+
+### Hero Images
+- **Desktop**: 600px x 300-400px
+- **Mobile**: 600px x 400-500px (taller ratio)
+- **File Size**: < 200KB per image
+
+## Email Structure
+
+Every email follows this basic structure:
+
+```
+1. Preheader Text (hidden but important for inbox preview)
+2. Header (Logo + Navigation optional)
+3. Hero Section (Image + Headline)
+4. Body Content (Message + Products/Content)
+5. Call-to-Action (Primary conversion goal)
+6. Footer (Links, Unsubscribe, Address)
+```
+
+## Mobile Optimization
+
+### Key Principles
+- **Touch Targets**: Min 44px x 44px for buttons
+- **Font Size**: Min 16px to prevent auto-zoom
+- **Single Column**: Stack elements vertically
+- **Finger-friendly**: Space buttons 8-10px apart
+
+## Accessibility
+
+- **Alt Text**: Describe all images
+- **Color Contrast**: WCAG AA minimum (4.5:1)
+- **Semantic HTML**: Use proper heading hierarchy
+- **Plain Text**: Always include plain text version
+
+## Brand Customization
+
+When adapting these templates:
+
+1. Replace placeholder colors with brand colors
+2. Update logo and brand imagery
+3. Adjust typography to match brand fonts (web-safe)
+4. Customize CTAs to match brand voice
+5. Add brand-specific elements (patterns, shapes)
+
+## Testing Checklist
+
+Before deploying any email:
+
+- [ ] Test on Gmail (desktop + mobile)
+- [ ] Test on Outlook (2016, 365)
+- [ ] Test on Apple Mail (iOS + macOS)
+- [ ] Test on Yahoo Mail
+- [ ] Check all links work
+- [ ] Verify images load with/without image blocking
+- [ ] Test unsubscribe link
+- [ ] Check spam score
+- [ ] Validate HTML

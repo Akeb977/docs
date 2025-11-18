@@ -1,15 +1,51 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "E-Commerce Email Templates",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#000000",
+    "light": "#333333",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
+      {
+        "tab": "Email Templates",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "email-templates/overview",
+              "email-templates/design-system"
+            ]
+          },
+          {
+            "group": "Welcome Series",
+            "pages": [
+              "email-templates/welcome-series/welcome-email"
+            ]
+          },
+          {
+            "group": "Transactional",
+            "pages": [
+              "email-templates/transactional/order-confirmation"
+            ]
+          },
+          {
+            "group": "Promotional",
+            "pages": [
+              "email-templates/promotional/sale-announcement"
+            ]
+          },
+          {
+            "group": "Retention",
+            "pages": [
+              "email-templates/retention/abandoned-cart"
+            ]
+          }
+        ]
+      },
       {
         "tab": "Guides",
         "groups": [
