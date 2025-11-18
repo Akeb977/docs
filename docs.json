@@ -23,7 +23,8 @@
           {
             "group": "Welcome Series",
             "pages": [
-              "email-templates/welcome-series/welcome-email"
+              "email-templates/welcome-series/welcome-email",
+              "email-templates/welcome-series/nutrafol-welcome-email"
             ]
           },
           {

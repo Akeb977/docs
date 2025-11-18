@@ -1,0 +1,455 @@
+---
+title: 'Nutrafol Welcome Email'
+description: 'Welcome email for Nutrafol with 10% discount offer'
+icon: 'hand-wave'
+---
+
+# Nutrafol Welcome Email
+
+Personalized welcome email for new Nutrafol subscribers with discount offer.
+
+## Email Copy
+
+**Headline:** WELCOME TO NUTRAFOL
+**Subheadline:** Your Personalized Hair Growth Plan Starts Now
+**CTA:** CLAIM YOUR 10% OFF
+**Discount Code:** STARTGROWING10
+
+---
+
+## Preview Description
+
+Since images aren't uploaded yet, here's what the email will look like:
+
+1. **Header**: Nutrafol logo (clean, minimal)
+2. **Hero Section**: Hero image showing happy person with healthy hair or product lifestyle shot
+3. **Main Content**: Welcome message with headline and subheadline
+4. **Discount Section**: Highlighted discount code box
+5. **CTA Button**: Bold "CLAIM YOUR 10% OFF" button
+6. **Footer**: Support info and social links
+
+---
+
+## Images Needed
+
+<Steps>
+  <Step title="Nutrafol Logo">
+    - Format: PNG with transparent background
+    - Recommended size: 300px x 100px
+    - Upload to: `/email-assets/logos/nutrafol-logo.png`
+  </Step>
+
+  <Step title="Hero Image">
+    - Suggested: Lifestyle shot of person with healthy hair OR product showcase
+    - Size: 1200px x 600px
+    - Format: JPG optimized
+    - Upload to: `/email-assets/images/nutrafol-welcome-hero.jpg`
+  </Step>
+
+  <Step title="Social Media Icons (Optional)">
+    - Instagram, Facebook, Twitter icons
+    - Size: 64px x 64px
+    - Upload to: `/email-assets/icons/`
+  </Step>
+</Steps>
+
+---
+
+## HTML Template - Ready to Use
+
+<CodeGroup>
+
+```html Complete Nutrafol Welcome Email
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Nutrafol</title>
+    <style>
+        /* Reset */
+        body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F8F6F3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;">
+
+    <!-- Preheader Text -->
+    <div style="display: none; max-height: 0px; overflow: hidden;">
+        Your personalized hair growth journey starts now! Get 10% off with code STARTGROWING10 →
+    </div>
+
+    <!-- Email Container -->
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F8F6F3;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+
+                <!-- Main Content Table -->
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #FFFFFF;">
+
+                    <!-- Header / Logo -->
+                    <tr>
+                        <td align="center" style="padding: 40px 40px 30px;">
+                            <!-- REPLACE WITH YOUR NUTRAFOL LOGO -->
+                            <img src="YOUR_NUTRAFOL_LOGO_URL_HERE" alt="Nutrafol" width="180" style="display: block; max-width: 180px; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Hero Image -->
+                    <tr>
+                        <td align="center" style="padding: 0;">
+                            <!-- REPLACE WITH YOUR HERO IMAGE
+                                 Suggested: Lifestyle photo showing person with healthy hair
+                                 or product showcase on clean background -->
+                            <img src="YOUR_HERO_IMAGE_URL_HERE" alt="Welcome to Nutrafol" width="600" style="display: block; width: 100%; max-width: 600px; height: auto;">
+                        </td>
+                    </tr>
+
+                    <!-- Main Headline -->
+                    <tr>
+                        <td style="padding: 48px 40px 0;">
+                            <h1 style="margin: 0; font-size: 36px; line-height: 1.2; color: #2C3E50; font-weight: 700; text-align: center; letter-spacing: 1px;">
+                                WELCOME TO NUTRAFOL
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <!-- Subheadline -->
+                    <tr>
+                        <td style="padding: 20px 40px 32px;">
+                            <p style="margin: 0; font-size: 20px; line-height: 1.4; color: #556B7C; text-align: center; font-weight: 500;">
+                                Your Personalized Hair Growth Plan Starts Now
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Body Copy -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #556B7C; text-align: center;">
+                                We're thrilled to have you join the Nutrafol community. Our science-backed approach to hair wellness is designed to help you achieve your hair growth goals naturally.
+                            </p>
+                            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #556B7C; text-align: center;">
+                                As a welcome gift, enjoy <strong style="color: #2C3E50;">10% off</strong> your first order.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Discount Code Box -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 32px;">
+                            <div style="background: linear-gradient(135deg, #F8F6F3 0%, #E8E5E0 100%); padding: 28px 24px; border-radius: 12px; border: 2px solid #D4CFC7;">
+                                <p style="margin: 0 0 12px; font-size: 14px; color: #556B7C; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                                    Your Welcome Offer
+                                </p>
+                                <p style="margin: 0 0 8px; font-size: 32px; font-weight: 800; color: #2C3E50; letter-spacing: 2px; font-family: 'Courier New', monospace;">
+                                    STARTGROWING10
+                                </p>
+                                <p style="margin: 0; font-size: 12px; color: #798A99;">
+                                    10% off your first order
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td align="center" style="padding: 0 40px 48px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td style="border-radius: 6px; background-color: #2C3E50;">
+                                        <a href="YOUR_SHOP_URL_HERE" target="_blank" style="display: inline-block; padding: 18px 48px; font-size: 16px; color: #FFFFFF; text-decoration: none; font-weight: 700; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase;">
+                                            Claim Your 10% Off
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <p style="margin: 16px 0 0; font-size: 13px; color: #798A99;">
+                                Free shipping on orders over $75
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- What to Expect Section -->
+                    <tr>
+                        <td style="padding: 40px 40px 32px; background-color: #FAFAF9; border-top: 1px solid #E8E5E0;">
+                            <h2 style="margin: 0 0 24px; font-size: 22px; color: #2C3E50; font-weight: 700; text-align: center;">
+                                What to Expect on Your Journey
+                            </h2>
+
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="padding: 16px;">
+                                        <div style="text-align: center; max-width: 150px;">
+                                            <p style="margin: 0 0 8px; font-size: 32px;">🌱</p>
+                                            <p style="margin: 0 0 8px; font-size: 16px; color: #2C3E50; font-weight: 600;">Month 1-2</p>
+                                            <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #798A99;">Less shedding, healthier scalp</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" style="padding: 16px;">
+                                        <div style="text-align: center; max-width: 150px;">
+                                            <p style="margin: 0 0 8px; font-size: 32px;">💪</p>
+                                            <p style="margin: 0 0 8px; font-size: 16px; color: #2C3E50; font-weight: 600;">Month 3-4</p>
+                                            <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #798A99;">Stronger, thicker strands</p>
+                                        </div>
+                                    </td>
+                                    <td align="center" style="padding: 16px;">
+                                        <div style="text-align: center; max-width: 150px;">
+                                            <p style="margin: 0 0 8px; font-size: 32px;">✨</p>
+                                            <p style="margin: 0 0 8px; font-size: 16px; color: #2C3E50; font-weight: 600;">Month 6+</p>
+                                            <p style="margin: 0; font-size: 13px; line-height: 1.4; color: #798A99;">Visibly fuller hair</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Why Nutrafol Section -->
+                    <tr>
+                        <td style="padding: 40px 40px 32px;">
+                            <h2 style="margin: 0 0 24px; font-size: 22px; color: #2C3E50; font-weight: 700; text-align: center;">
+                                Why Nutrafol?
+                            </h2>
+
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding: 12px 0;">
+                                        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #556B7C;">
+                                            <strong style="color: #2C3E50;">✓ Clinically Proven</strong><br>
+                                            <span style="font-size: 14px; color: #798A99;">Results backed by clinical studies and real users</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px 0;">
+                                        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #556B7C;">
+                                            <strong style="color: #2C3E50;">✓ 100% Drug-Free</strong><br>
+                                            <span style="font-size: 14px; color: #798A99;">Natural, medical-grade ingredients</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px 0;">
+                                        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #556B7C;">
+                                            <strong style="color: #2C3E50;">✓ Personalized Approach</strong><br>
+                                            <span style="font-size: 14px; color: #798A99;">Formulas tailored to your unique needs</span>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Support / Help Section -->
+                    <tr>
+                        <td style="padding: 40px 40px 32px; background-color: #FAFAF9; border-top: 1px solid #E8E5E0;">
+                            <h3 style="margin: 0 0 16px; font-size: 18px; color: #2C3E50; font-weight: 700; text-align: center;">
+                                Questions? We're Here to Help
+                            </h3>
+                            <p style="margin: 0 0 16px; font-size: 14px; color: #556B7C; text-align: center; line-height: 1.6;">
+                                Our Hair Wellness Advisors are ready to help you every step of the way.
+                            </p>
+                            <p style="margin: 0; font-size: 14px; text-align: center;">
+                                <a href="mailto:support@nutrafol.com" style="color: #2C3E50; font-weight: 600; text-decoration: none;">support@nutrafol.com</a>
+                                <span style="color: #D4CFC7; margin: 0 8px;">|</span>
+                                <a href="tel:+18001234567" style="color: #2C3E50; font-weight: 600; text-decoration: none;">1-800-123-4567</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Social Media -->
+                    <tr>
+                        <td align="center" style="padding: 32px 40px 24px;">
+                            <p style="margin: 0 0 16px; font-size: 14px; color: #798A99; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">
+                                Follow Your Journey
+                            </p>
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <!-- Replace with your actual social media links -->
+                                    <td style="padding: 0 10px;">
+                                        <a href="YOUR_INSTAGRAM_URL" target="_blank" style="color: #556B7C; text-decoration: none; font-size: 14px; font-weight: 600;">
+                                            Instagram
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 10px; color: #D4CFC7;">|</td>
+                                    <td style="padding: 0 10px;">
+                                        <a href="YOUR_FACEBOOK_URL" target="_blank" style="color: #556B7C; text-decoration: none; font-size: 14px; font-weight: 600;">
+                                            Facebook
+                                        </a>
+                                    </td>
+                                    <td style="padding: 0 10px; color: #D4CFC7;">|</td>
+                                    <td style="padding: 0 10px;">
+                                        <a href="YOUR_TIKTOK_URL" target="_blank" style="color: #556B7C; text-decoration: none; font-size: 14px; font-weight: 600;">
+                                            TikTok
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" style="padding: 24px 40px 40px; border-top: 1px solid #E8E5E0;">
+                            <p style="margin: 0 0 8px; font-size: 12px; line-height: 1.5; color: #9EADB7;">
+                                © 2024 Nutrafol. All rights reserved.
+                            </p>
+                            <p style="margin: 0 0 8px; font-size: 12px; line-height: 1.5; color: #9EADB7;">
+                                123 Hair Wellness Lane, New York, NY 10001
+                            </p>
+                            <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #9EADB7;">
+                                <a href="YOUR_UNSUBSCRIBE_LINK" style="color: #9EADB7; text-decoration: underline;">Unsubscribe</a>
+                                <span style="margin: 0 6px;">|</span>
+                                <a href="YOUR_PREFERENCES_LINK" style="color: #9EADB7; text-decoration: underline;">Email Preferences</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+                <!-- End Main Content Table -->
+
+            </td>
+        </tr>
+    </table>
+    <!-- End Email Container -->
+
+</body>
+</html>
+```
+
+</CodeGroup>
+
+---
+
+## Subject Line Suggestions
+
+<Accordion title="Option 1: Direct & Clear">
+```
+Welcome to Nutrafol + 10% Off Your First Order
+```
+</Accordion>
+
+<Accordion title="Option 2: Benefit-Focused">
+```
+Your Hair Growth Journey Starts Now (Save 10%)
+```
+</Accordion>
+
+<Accordion title="Option 3: Personal & Welcoming">
+```
+Welcome! Here's 10% Off to Start Your Hair Wellness Journey
+```
+</Accordion>
+
+<Accordion title="Option 4: Urgency + Value">
+```
+Start Growing Healthier Hair Today - 10% Off Inside
+```
+</Accordion>
+
+---
+
+## Color Palette Used
+
+This template uses a sophisticated, wellness-focused color scheme:
+
+| Color | Hex Code | Usage |
+|-------|----------|-------|
+| Dark Blue | #2C3E50 | Headlines, CTAs |
+| Medium Gray | #556B7C | Body text |
+| Light Gray | #798A99 | Secondary text |
+| Warm Beige | #F8F6F3 | Background |
+| Light Beige | #E8E5E0 | Dividers, accents |
+
+**Want different colors?** Let me know your brand colors and I'll update the template!
+
+---
+
+## Placeholders to Replace
+
+Before deploying, update these in the HTML:
+
+```
+YOUR_NUTRAFOL_LOGO_URL_HERE     → Your logo URL
+YOUR_HERO_IMAGE_URL_HERE        → Your hero image URL
+YOUR_SHOP_URL_HERE              → Link to your shop/product page
+YOUR_INSTAGRAM_URL              → Instagram profile
+YOUR_FACEBOOK_URL               → Facebook page
+YOUR_TIKTOK_URL                 → TikTok profile
+support@nutrafol.com            → Your actual support email
+1-800-123-4567                  → Your phone number
+YOUR_UNSUBSCRIBE_LINK           → Unsubscribe URL
+YOUR_PREFERENCES_LINK           → Email preferences URL
+123 Hair Wellness Lane...       → Your actual address
+```
+
+---
+
+## Testing Checklist
+
+- [ ] Replace all placeholder URLs
+- [ ] Update contact information
+- [ ] Add your logo and hero image
+- [ ] Test discount code works
+- [ ] Preview in Gmail (desktop + mobile)
+- [ ] Preview in Outlook
+- [ ] Preview in Apple Mail
+- [ ] Check all links work
+- [ ] Test on mobile device
+- [ ] Send test email to yourself
+
+---
+
+## Next Steps
+
+<Steps>
+  <Step title="Copy the HTML">
+    Copy the complete HTML code above
+  </Step>
+
+  <Step title="Add Your Images">
+    Upload your logo and hero image, then replace the placeholder URLs
+  </Step>
+
+  <Step title="Update Links">
+    Replace all placeholder links with your actual URLs
+  </Step>
+
+  <Step title="Deploy to ESP">
+    Paste into Klaviyo, Mailchimp, or your email platform
+  </Step>
+
+  <Step title="Send Test">
+    Send a test email and verify everything looks perfect
+  </Step>
+</Steps>
+
+---
+
+## For Figma
+
+To recreate this in Figma for client presentations:
+
+1. **Layout**: 600px width artboard
+2. **Typography**: Use similar sans-serif (Inter, Roboto, or Helvetica)
+3. **Colors**: Copy the color palette above
+4. **Spacing**: 40px side padding, consistent vertical rhythm
+5. **Export**: Export frames as PNG for client approval
+
+---
+
+## Performance Tips
+
+<Tip>
+**Wellness Brand Emails** perform best when sent immediately after signup
+</Tip>
+
+<Tip>
+**Benchmark**: Welcome emails in the wellness industry see 50-60% open rates
+</Tip>
+
+<Warning>
+Make sure the discount code **STARTGROWING10** is active in your e-commerce platform before sending!
+</Warning>
